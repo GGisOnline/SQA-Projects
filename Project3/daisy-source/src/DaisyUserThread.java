@@ -79,9 +79,11 @@ public class DaisyUserThread extends Thread {
 					contents = new byte[size];
 					offset = 0;
 
+					status = DaisyDir.read(fh, offset, size, contents);
+
 					/* ----------
 					 * Added part
-					 * ---------- */
+					 * ---------- 
 
 					if(fh.isInitialized()) {
 						status = DaisyDir.read(fh, offset, size, contents);
@@ -89,7 +91,7 @@ public class DaisyUserThread extends Thread {
 						status = Daisy.DAISY_ERR_BADHANDLE;
 					}
 					
-					/* -----------------
+					-----------------
 					 * End of added part
 					 * ----------------- */
 

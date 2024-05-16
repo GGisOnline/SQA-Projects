@@ -294,7 +294,7 @@ public class DaisyDir {
 			   int offset, 
 			   int size, 
 			   byte b[]) {
-        return Daisy.read(file.getInodenum(), offset, size, b);
+        return Daisy.read(file.inodenum, offset, size, b);
     }
 
     static public int get_attr(FileHandle file, Attribute a) {
